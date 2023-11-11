@@ -1,138 +1,59 @@
 {{ 'diapositiva-nueva.css' | asset_url | stylesheet_tag }}
 
-
-
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 {%- liquid
  assign img_predeterminado="https://res.cloudinary.com/darps1cta/image/upload/v1681937216/sitioweb/5_razones_por_las_que_tu_negocio_necesita_una_tienda_virtual_en_Shopify_elugcl.jpg"
+-%}
 
- -%}
- 
-<section class='diapositiva-nueva' >
-
-
-
-      {%- for block in section.blocks -%}
-   
-
-        {% if block.settings.image_desktop  %}
-        {% if block.settings.link_de_diapositiva %}
-        
-    <a href="{{block.settings.link_de_diapositiva}}" class="desktop-image">
-      {{ block.settings.image_desktop | image_url: width: 1536, height: 600 | image_tag: sizes: "(max-width: 768px) 40vw, (max-width: 1280px) 720px, (max-width: 1920px) 1280px, (max-width: 2560px) 1920px, (max-width: 3840px) 2560px", class: "desktop-image" }}
-    </a>
-  
-
-    {% else %}
-   
-    <div class="desktop-image" >
-      {{ block.settings.image_desktop | image_url: width: 1536, height: 600 | image_tag: sizes: "(max-width: 768px) 40vw, (max-width: 1280px) 720px, (max-width: 1920px) 1280px, (max-width: 2560px) 1920px, (max-width: 3840px) 2560px", class: "desktop-image" }}
+<section class='diapositiva-nueva'>
+  {%- for block in section.blocks -%}
+    <div>
+      {% if block.settings.image_desktop %}
+        <img src="{{ block.settings.image_desktop | img_url: '1536x600' }}" alt="{{ block.settings.image_desktop.alt | escape }}">
+      {% else %}
+        <img src="{{ img_predeterminado }}" alt="Imagen predeterminada">
+      {% endif %}
     </div>
-
-    
-  {% endif %}
-  {% else %}
-  
-    <img
-      class="banner-predeterminado desktop-image"
-      alt="predeterminado desk"
-      src={{img_predeterminado}}>
-   
-  {% endif %}
-{% endfor %}      
-     
+  {% endfor %}
 </section>
-<section class='diapositiva-nueva-mobil'>
-  {% for block in section.blocks %}
-  {% comment %} MOBIL {% endcomment %}
-  {% if block.settings.image_mobile  %}
-    {% if block.settings.link_de_diapositiva %}
-   
-    <a href="{{block.settings.link_de_diapositiva}}" class="mobile-image">
-      {{ block.settings.image_mobile | image_url: width: 400, height: 600 | image_tag: width: 360, height: 600, sizes: "(min-width: 750px) 100vw, (min-width: 575px) calc(50vw - 300px), (min-width: 375px) calc(25vw - 150px)", class: "mobile-image" }}
-    </a>
- 
-    {% else %}
-    
-    <div class="mobile-image">
-      {{ block.settings.image_mobile | image_url: width: 400, height: 600 | image_tag: width: 360, height: 600, sizes: "(min-width: 750px) 100vw, (min-width: 575px) calc(50vw - 300px), (min-width: 375px) calc(25vw - 150px)", class: "mobile-image" }}
-    </div>
-  
-    {% endif %}
-    {% else %}
-   
-    <img
-      class="banner-predeterminado mobile-image"
-      alt="predeterminado mov"
-      src={{img_predeterminado}}>
-    
-  {% endif %}
 
-        {% endfor %}
+<section class='diapositiva-nueva-mobil'>
+  {%- for block in section.blocks -%}
+    <div>
+      {% if block.settings.image_mobile %}
+        <img src="{{ block.settings.image_mobile | img_url: '400x600' }}" alt="{{ block.settings.image_mobile.alt | escape }}">
+      {% else %}
+        <img src="{{ img_predeterminado }}" alt="Imagen predeterminada">
+      {% endif %}
+    </div>
+  {% endfor %}
 </section>
 
 <script>
+  $(document).ready(function(){
+    $('.diapositiva-nueva').slick({
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      adaptiveHeight: true
+    });
 
-const mobileImages = document.querySelectorAll('.mobile-image');
-
-// Create a variable to track the current image index
-let currentImageIndex = 0;
-
-// Create a function to slide to the next image
-function slideToNextImage() {
-  // Increment the current image index
-  currentImageIndex++;
-
-  // If the current image index is greater than or equal to the number of mobile images, reset it to 0
-  if (currentImageIndex >= mobileImages.length) {
-    currentImageIndex = 0;
-  }
-
-  // Update the visibility of the mobile images
-  mobileImages.forEach((image, index) => {
-    if (index === currentImageIndex) {
-      image.style.display = 'block';
-      image.src = 'https://res.cloudinary.com/darps1cta/image/upload/v1681937216/sitioweb/5_razones_por_las_que_tu_negocio_necesita_una_tienda_virtual_en_Shopify_elugcl.jpg';
-    } else {
-      image.style.opacity = 0;
-    }
-  });
-
-  // Set a timer to run the slideToNextImage() function again
-  setTimeout(slideToNextImage, 3000);
-}
-
-// Add a click event listener to the next button
-//document.querySelector('.next-button').addEventListener('click', slideToNextImage);
-
-// Call the slideToNextImage() function once to initialize the slider
-slideToNextImage();
-  
-  
-   $('.diapositiva-nueva').slick({
-    arrows: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true, // Esto activa el modo autoplay
-    autoplaySpeed: 2000 // Ajusta la velocidad del autoplay en milisegundos
-  });
-  
     $('.diapositiva-nueva-mobil').slick({
-    arrows: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true, // Esto activa el modo autoplay
-    autoplaySpeed: 2000 // Ajusta la velocidad del autoplay en milisegundos
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      adaptiveHeight: true
+    });
   });
-
-  
 </script>
 
 {% comment %}
