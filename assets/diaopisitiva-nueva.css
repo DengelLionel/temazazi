@@ -1,21 +1,27 @@
-/* Sobrescribe los estilos para asegurar que las diapositivas de escritorio se muestren solo en pantallas grandes */
-@media (min-width: 768px) {
-    .slick-initialized .diapositiva-nueva-desktop .slick-slide {
-        display: block;
-    }
-
-    .diapositiva-nueva-mobil .slick-slide {
-        display: none !important;
-    }
+/* Estilos para diapositivas de escritorio */
+.diapositiva-nueva-desktop, .slick-slide {
+    width: 100%;
+    display: block; /* Asegura que las imágenes de escritorio se muestren */
+}
+.desktop-image, .slick-slide {
+    width: 100%;
+    display: block; 
 }
 
-/* Sobrescribe los estilos para asegurar que las diapositivas móviles se muestren solo en pantallas pequeñas */
+/* Estilos iniciales para diapositivas móviles - ocultos */
+.diapositiva-nueva-mobil, .mobile-image, .slick-slide {
+    display: none !important;
+}
+
+/* Consultas de medios para dispositivos móviles */
 @media (max-width: 767px) {
-    .slick-initialized .diapositiva-nueva-mobil .slick-slide {
-        display: block;
+    /* Oculta las diapositivas de escritorio en dispositivos móviles */
+    .diapositiva-nueva-desktop, .desktop-image, .slick-slide {
+        display: none !important;
     }
 
-    .diapositiva-nueva-desktop .slick-slide {
-        display: none !important;
+    /* Muestra las diapositivas móviles en dispositivos móviles */
+    .diapositiva-nueva-mobil, .mobile-image, .slick-slide {
+        display: block;
     }
 }
