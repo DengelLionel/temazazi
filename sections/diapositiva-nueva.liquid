@@ -112,26 +112,35 @@ function slideToNextImage() {
 slideToNextImage();
   
   
-   $('.diapositiva-nueva').slick({
-    arrows: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true, // Esto activa el modo autoplay
-    autoplaySpeed: 2000 // Ajusta la velocidad del autoplay en milisegundos
-  });
-  
-    $('.diapositiva-nueva-mobil').slick({
-    arrows: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true, // Esto activa el modo autoplay
-    autoplaySpeed: 2000 // Ajusta la velocidad del autoplay en milisegundos
-  });
+$(document).ready(function(){
+  // Inicialización de Slick para escritorio
+  if ($(window).width() > 767) {
+    $('.diapositiva-nueva').slick({
+      // Tus opciones para Slick en escritorio
+      arrows: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000
+    });
+  }
 
+  // Inicialización de Slick para móvil
+  if ($(window).width() <= 767) {
+    $('.diapositiva-nueva-mobil').slick({
+      // Tus opciones para Slick en móvil
+      arrows: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000
+    });
+  }
+});
   
 </script>
 
