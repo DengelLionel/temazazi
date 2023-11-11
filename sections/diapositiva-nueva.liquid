@@ -27,14 +27,14 @@
         {% if block.settings.link_de_diapositiva %}
         
     <a href="{{block.settings.link_de_diapositiva}}" class="desktop-image swiper-slide">
-      {{ block.settings.image_desktop | image_url: width: 1536, height: 600 | image_tag: sizes: "(max-width: 768px) 40vw, (max-width: 1280px) 720px, (max-width: 1920px) 1280px, (max-width: 2560px) 1920px, (max-width: 3840px) 2560px", class: "swiper-slide desktop-image " }}
+      {{ block.settings.image_desktop | image_url: width: 1536, height: 600 | image_tag: sizes: "(max-width: 768px) 40vw, (max-width: 1280px) 720px, (max-width: 1920px) 1280px, (max-width: 2560px) 1920px, (max-width: 3840px) 2560px", class: "swiper-slide desktop-image ",alt:"", loading: 'lazy' }}
     </a>
   
 
     {% else %}
    
     <div class=" swiper-slide desktop-image" >
-      {{ block.settings.image_desktop | image_url: width: 1536, height: 600 | image_tag: sizes: "(max-width: 768px) 40vw, (max-width: 1280px) 720px, (max-width: 1920px) 1280px, (max-width: 2560px) 1920px, (max-width: 3840px) 2560px", class: "swiper-slide desktop-image" }}
+      {{ block.settings.image_desktop | image_url: width: 1536, height: 600 | image_tag: sizes: "(max-width: 768px) 40vw, (max-width: 1280px) 720px, (max-width: 1920px) 1280px, (max-width: 2560px) 1920px, (max-width: 3840px) 2560px", class: "swiper-slide desktop-image",alt:"", loading: 'lazy' }}
     </div>
 
     
@@ -59,13 +59,13 @@
     {% if block.settings.link_de_diapositiva %}
    
     <a href="{{block.settings.link_de_diapositiva}}" class="mobile-image swiper-slide">
-      {{ block.settings.image_mobile | image_url: width: 400, height: 600 | image_tag: width: 360, height: 600, sizes: "(min-width: 750px) 100vw, (min-width: 575px) calc(50vw - 300px), (min-width: 375px) calc(25vw - 150px)", class: " swiper-slide mobile-image" }}
+      {{ block.settings.image_mobile | image_url: width: 400, height: 600 | image_tag: width: 360, height: 600, sizes: "(min-width: 750px) 100vw, (min-width: 575px) calc(50vw - 300px), (min-width: 375px) calc(25vw - 150px)", class: " swiper-slide mobile-image",alt:"", loading: 'lazy' }}
     </a>
  
     {% else %}
     
     <div class="swiper-slide mobile-image ">
-      {{ block.settings.image_mobile | image_url: width: 400, height: 600 | image_tag: width: 360, height: 600, sizes: "(min-width: 750px) 100vw, (min-width: 575px) calc(50vw - 300px), (min-width: 375px) calc(25vw - 150px)", class: "swiper-slide mobile-image " }}
+      {{ block.settings.image_mobile | image_url: width: 400, height: 600 | image_tag: width: 360, height: 600, sizes: "(min-width: 750px) 100vw, (min-width: 575px) calc(50vw - 300px), (min-width: 375px) calc(25vw - 150px)", class: "swiper-slide mobile-image ",alt:"", loading: 'lazy' }}
     </div>
   
     {% endif %}
