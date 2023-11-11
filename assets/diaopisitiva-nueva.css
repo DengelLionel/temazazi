@@ -30,18 +30,3 @@
   }
   
 
- 
-  /* Muestra las diapositivas móviles y oculta las de escritorio en dispositivos pequeños */
-  @media (max-width: 767px) {
-    .diapositiva-nueva-mobil .mobile-image {
-      display: block;
-    }
-  }
-  
-  /* Oculta las diapositivas móviles en dispositivos de escritorio */
-  @media (min-width: 768px) {
-    .diapositiva-nueva-mobil {
-      display: none;
-    }
-  }
-  
