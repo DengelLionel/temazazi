@@ -75,31 +75,61 @@
 </section>
 
 <script>
-$$(document).ready(function(){
-  // Verifica el tamaño de pantalla al cargar la página
-  if ($(window).width() > 767) {
-    // Inicializa Slick solo para escritorio
-    $('.diapositiva-nueva-desktop').slick({
-      arrows: false,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000
-    });
-  } else {
-    // Inicializa Slick solo para móvil
-    $('.diapositiva-nueva-mobil').slick({
-      arrows: false,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000
-    });
-  }
+$(document).ready(function(){
+  // Inicialización de Slick para escritorio
+  $('.diapositiva-nueva-desktop').slick({
+    // opciones generales
+    arrows: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    // configuración responsiva
+    responsive: [
+      {
+        breakpoint: 1024, // en pantallas menores a 1024px
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 1536, // en pantallas menores a 768px
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false
+        }
+      }
+      // puedes agregar más puntos de interrupción si es necesario
+    ]
+  });
+    
+  // Inicialización de Slick para móvil
+  $('.diapositiva-nueva-mobil').slick({
+    // opciones generales
+    arrows: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    // configuración responsiva
+    responsive: [
+      {
+        breakpoint: 600, // en pantallas menores a 600px
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false
+        }
+      }
+      // puedes agregar más puntos de interrupción si es necesario
+    ]
+  });
 });
 
   
