@@ -14,7 +14,7 @@
     display: none;
 }
 /* Oculta las diapositivas de escritorio en dispositivos móviles */
-@media (max-width: 767px) {
+@media query and (max-width: 767px) {
     .diapositiva-nueva-desktop {
         display: none;
     }
