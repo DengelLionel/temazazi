@@ -16,11 +16,6 @@
     }
 }
 
-/* Estilos para diapositivas móviles */
-.diapositiva-nueva-mobil .mobile-image {
-    width: 100%;
-    display: none; /* Inicialmente oculta las imágenes móviles */
-}
 
 /* Muestra las diapositivas móviles y oculta las de escritorio en dispositivos pequeños */
 @media (max-width: 767px) {
