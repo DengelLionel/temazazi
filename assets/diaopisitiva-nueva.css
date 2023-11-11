@@ -1,38 +1,32 @@
-/* Estilos generales para las diapositivas de escritorio */
+/* Estilos para diapositivas de escritorio */
 .diapositiva-nueva-desktop .desktop-image {
     width: 100%;
     display: block; /* Asegura que las imágenes de escritorio se muestren */
-  }
-  
-  /* Estilos generales para las diapositivas móviles */
-  .diapositiva-nueva-mobil .mobile-image {
+}
+
+/* Oculta las diapositivas de escritorio en dispositivos móviles */
+@media (max-width: 767px) {
+    .diapositiva-nueva-desktop {
+        display: none;
+    }
+}
+
+/* Estilos para diapositivas móviles */
+.diapositiva-nueva-mobil .mobile-image {
     width: 100%;
-    display: none; /* Oculta inicialmente las imágenes móviles */
-  }
-  
-  /* Consultas de medios para dispositivos móviles */
-  @media (max-width: 767px) {
-    /* Oculta las diapositivas de escritorio en dispositivos móviles */
-    .diapositiva-nueva-desktop, .diapositiva-nueva-desktop .desktop-image {
-      display: none;
+    display: none; /* Inicialmente oculta las imágenes móviles */
+}
+
+/* Muestra las diapositivas móviles y oculta las de escritorio en dispositivos pequeños */
+@media (max-width: 767px) {
+    .diapositiva-nueva-mobil .mobile-image {
+        display: block;
     }
-  
-    /* Muestra las diapositivas móviles en dispositivos móviles */
-    .diapositiva-nueva-mobil, .diapositiva-nueva-mobil .mobile-image {
-      display: block;
+}
+
+/* Oculta las diapositivas móviles en dispositivos de escritorio */
+@media (min-width: 768px) {
+    .diapositiva-nueva-mobil {
+        display: none;
     }
-  }
-  
-  /* Consultas de medios para dispositivos de escritorio */
-  @media (min-width: 768px) {
-    /* Muestra las diapositivas de escritorio en dispositivos de escritorio */
-    .diapositiva-nueva-desktop, .diapositiva-nueva-desktop .desktop-image {
-      display: block;
-    }
-  
-    /* Oculta las diapositivas móviles en dispositivos de escritorio */
-    .diapositiva-nueva-mobil, .diapositiva-nueva-mobil .mobile-image {
-      display: none;
-    }
-  }
-  
+}
