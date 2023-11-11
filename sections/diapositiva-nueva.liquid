@@ -92,11 +92,26 @@
 .diapositiva-nueva-mobil {
     display: none;
 }
-.desktop-image{
-    position: relative;
+.desktop-image img {
+    width: 100%;
+    height: auto;
     object-fit: contain;
 }
-/* Consultas de medios para dispositivos móviles */
+@media (max-width: 1024px) {
+    .desktop-image img {
+        height: 600px; /* Altura para pantallas hasta 1024px */
+    }
+}
+@media (min-width: 1025px) and (max-width: 1536px) {
+    .desktop-image img {
+        height: 700px; /* Altura para pantallas entre 1025px y 1536px */
+    }
+}
+@media (min-width: 1537px) {
+    .desktop-image img {
+        height: 800px; /* Altura para pantallas de 1537px en adelante */
+    }
+}
 @media (max-width: 767px) {
     /* Oculta las diapositivas de escritorio en dispositivos móviles */
     .diapositiva-nueva-desktop {
