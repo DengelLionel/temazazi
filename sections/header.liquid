@@ -1,40 +1,7 @@
 <link rel="stylesheet" href="{{ 'header-nuevo.css' | asset_url }}" media="print" onload="this.media='all'">
-
-
-{% assign logo_url = section.settings.logo_icono | default: shop.logo %}
-{% assign menu_id = section.settings.menu_right | default: 'main-menu' %}
-{% assign menu_links = linklists[menu_id].links %}
-{% assign half_menu_size = menu_links.size | divided_by: 2 %}
-
 <header class="site-header" role="banner">
-  <nav class="navigation left-nav" aria-label="Menú de navegación principal izquierdo">
-    {% for link in menu_links %}
-      {% if forloop.index <= half_menu_size %}
-        <a href="{{ link.url }}" class="{% if link.active %}active{% endif %}" aria-label="{{ link.title }}">{{ link.title }}</a>
-      {% endif %}
-    {% endfor %}
-  </nav>
-  
-  <div class="logo">
-    {% if section.settings.logo_icono %}
-    <a href="{{ shop.url }}" aria-label="Inicio">
-      {{logo_url | image_url:width:150 |  image_tag: alt:shop.name }}
-    </a>
-    {% else %}
-    <h3>{{ shop.name }}</h3>
-    {% endif %}
-  </div>
-  
-  <nav class="navigation right-nav" aria-label="Menú de navegación principal derecho">
-    {% for link in menu_links %}
-      {% if forloop.index > half_menu_size %}
-        <a href="{{ link.url }}" class="{% if link.active %}active{% endif %}" aria-label="{{ link.title }}">{{ link.title }}</a>
-      {% endif %}
-    {% endfor %}
-  </nav>
+  {%  render 'header-logo-centro' logo_link:section.settings.logo_icono | default: shop.logo, menuid:section.settings.menu_right | default: 'main-menu'  %}
 </header>
-
-
 
 
 {% schema %}
