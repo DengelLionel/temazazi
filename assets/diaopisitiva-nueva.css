@@ -10,14 +10,14 @@
 
 /* Estilos iniciales para diapositivas móviles - ocultos */
 .diapositiva-nueva-mobil, .mobile-image {
-    display: none;
+    display: none !important;
 }
 
 /* Consultas de medios para dispositivos móviles */
 @media (max-width: 767px) {
     /* Oculta las diapositivas de escritorio en dispositivos móviles */
     .diapositiva-nueva-desktop, .desktop-image {
-        display: none;
+        display: none !important;
     }
 
     /* Muestra las diapositivas móviles en dispositivos móviles */
