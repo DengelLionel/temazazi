@@ -3,7 +3,9 @@
     width: 100%;
     display: block; /* Asegura que las imágenes de escritorio se muestren */
   }
-  
+  .mobile-image{
+    display: none;
+  }
   /* Oculta las diapositivas de escritorio en dispositivos móviles */
   @media (max-width: 767px) {
     .diapositiva-nueva-desktop {
