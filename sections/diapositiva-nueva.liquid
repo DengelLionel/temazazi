@@ -15,19 +15,7 @@
  assign img_predeterminado="https://res.cloudinary.com/darps1cta/image/upload/v1681937216/sitioweb/5_razones_por_las_que_tu_negocio_necesita_una_tienda_virtual_en_Shopify_elugcl.jpg"
 
  -%}
- {% assign image_width = 1536 %}
-{% assign image_height = 600 %}
 
-{% if browser_width > 1920 %}
-  {% assign image_width = 1920 %}
-  {% assign image_height = 800 %}
-{% elsif browser_width > 1536 %}
-  {% assign image_width = 1536 %}
-  {% assign image_height = 700 %}
-{% elsif browser_width > 1024 %}
-  {% assign image_width = 1024 %}
-  {% assign image_height = 600 %}
-{% endif %}
 <section class='diapositiva-nueva-desktop swiper-container ' >
 
 <div class="swiper-wrapper">
@@ -39,14 +27,14 @@
         {% if block.settings.link_de_diapositiva %}
         
     <a href="{{block.settings.link_de_diapositiva}}" class="desktop-image swiper-slide">
-      {{ block.settings.image_desktop | image_url:  width: image_width, height: image_height | image_tag:  width: image_width, height: image_height,alt:"", loading: 'lazy' }}
+      {{ block.settings.image_desktop | image_url: width: 1536, height: 600 | image_tag: sizes: "(max-width: 768px) 40vw, (max-width: 1280px) 720px, (max-width: 1920px) 1280px, (max-width: 2560px) 1920px, (max-width: 3840px) 2560px", class: "swiper-slide desktop-image ",alt:"", loading: 'lazy' }}
     </a>
   
 
     {% else %}
    
     <div class=" swiper-slide desktop-image" >
-      {{ block.settings.image_desktop |  width: image_width, height: image_height | image_tag:  width: image_width, height: image_height, class: "swiper-slide desktop-image",alt:"", loading: 'lazy' }}
+      {{ block.settings.image_desktop | image_url: width: 1536, height: 600 | image_tag: sizes: "(max-width: 768px) 40vw, (max-width: 1280px) 720px, (max-width: 1920px) 1280px, (max-width: 2560px) 1920px, (max-width: 3840px) 2560px", class: "swiper-slide desktop-image",alt:"", loading: 'lazy' }}
     </div>
 
     
