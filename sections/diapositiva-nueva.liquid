@@ -78,6 +78,7 @@
 
 $(document).ready(function(){
   // Inicialización de Slick para escritorio
+  if ($(window).width() > 767) {
   $('.diapositiva-nueva-desktop').slick({
     arrows: false,
     infinite: true,
@@ -87,8 +88,9 @@ $(document).ready(function(){
     autoplay: true,
     autoplaySpeed: 2000
   });
-
+    }
   // Inicialización de Slick para móvil
+  if ($(window).width() <= 767) {
   $('.diapositiva-nueva-mobil').slick({
     arrows: false,
     infinite: true,
@@ -98,6 +100,7 @@ $(document).ready(function(){
     autoplay: true,
     autoplaySpeed: 2000
   });
+    }
 });
   
 </script>
