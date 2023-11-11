@@ -1,27 +1,35 @@
-/* Estilos para diapositivas de escritorio */
-.diapositiva-nueva-desktop  {
-    width: 100%;
-    display: block; /* Asegura que las imágenes de escritorio se muestren */
-}
-.desktop-image  {
-    width: 100%;
-    display: block; 
+/* Estilos generales para diapositivas de escritorio */
+.diapositiva-nueva-desktop {
+    display: block; /* Muestra por defecto */
 }
 
-/* Estilos iniciales para diapositivas móviles - ocultos */
-.diapositiva-nueva-mobil, .mobile-image  {
-    display: none !important;
+/* Estilos generales para diapositivas móviles - ocultos por defecto */
+.diapositiva-nueva-mobil {
+    display: none;
 }
 
 /* Consultas de medios para dispositivos móviles */
 @media (max-width: 767px) {
     /* Oculta las diapositivas de escritorio en dispositivos móviles */
-    .diapositiva-nueva-desktop, .desktop-image  {
-        display: none !important;
+    .diapositiva-nueva-desktop {
+        display: none;
     }
 
     /* Muestra las diapositivas móviles en dispositivos móviles */
-    .diapositiva-nueva-mobil, .mobile-image {
+    .diapositiva-nueva-mobil {
         display: block;
+    }
+}
+
+/* Consultas de medios para dispositivos de escritorio */
+@media (min-width: 768px) {
+    /* Muestra las diapositivas de escritorio en dispositivos de escritorio */
+    .diapositiva-nueva-desktop {
+        display: block;
+    }
+
+    /* Oculta las diapositivas móviles en dispositivos de escritorio */
+    .diapositiva-nueva-mobil {
+        display: none;
     }
 }
