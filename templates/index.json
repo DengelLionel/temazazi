@@ -1,5 +1,24 @@
 {
   "sections": {
+    "1e7f1ddf-132b-48bc-b755-7daf3c8fc364": {
+      "type": "diapositiva-nueva",
+      "blocks": {
+        "66a901f0-1bc6-4c78-952d-97e891dbe8a4": {
+          "type": "announcement",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/tablones-verduras-borrosas-fondo.png",
+            "image_mobile": "shopify:\/\/shop_images\/1E9A4F52-7CBF-46AC-A25E-F6D4068A9FFA.jpg",
+            "link_de_diapositiva": ""
+          }
+        }
+      },
+      "block_order": [
+        "66a901f0-1bc6-4c78-952d-97e891dbe8a4"
+      ],
+      "settings": {
+        "texto_titulo": ""
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -66,30 +85,11 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
-    },
-    "1e7f1ddf-132b-48bc-b755-7daf3c8fc364": {
-      "type": "diapositiva-nueva",
-      "blocks": {
-        "66a901f0-1bc6-4c78-952d-97e891dbe8a4": {
-          "type": "announcement",
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/tablones-verduras-borrosas-fondo.png",
-            "image_mobile": "shopify:\/\/shop_images\/1E9A4F52-7CBF-46AC-A25E-F6D4068A9FFA.jpg",
-            "link_de_diapositiva": ""
-          }
-        }
-      },
-      "block_order": [
-        "66a901f0-1bc6-4c78-952d-97e891dbe8a4"
-      ],
-      "settings": {
-        "texto_titulo": ""
-      }
     }
   },
   "order": [
+    "1e7f1ddf-132b-48bc-b755-7daf3c8fc364",
     "image_banner",
-    "featured_collection",
-    "1e7f1ddf-132b-48bc-b755-7daf3c8fc364"
+    "featured_collection"
   ]
 }
