@@ -1,9 +1,5 @@
 {{ 'diapositiva-nueva.css' | asset_url | stylesheet_tag }}
 
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
 {%- liquid
  assign img_predeterminado="https://res.cloudinary.com/darps1cta/image/upload/v1681937216/sitioweb/5_razones_por_las_que_tu_negocio_necesita_una_tienda_virtual_en_Shopify_elugcl.jpg"
 -%}
@@ -12,9 +8,9 @@
   {%- for block in section.blocks -%}
     <div>
       {% if block.settings.image_desktop %}
-        <img src="{{ block.settings.image_desktop | img_url: '1536x600' }}" alt="{{ block.settings.image_desktop.alt | escape }}">
+        <img class="desktop-image" src="{{ block.settings.image_desktop | img_url: '1536x600' }}" alt="{{ block.settings.image_desktop.alt | escape }}">
       {% else %}
-        <img src="{{ img_predeterminado }}" alt="Imagen predeterminada">
+        <img class="desktop-image" src="{{ img_predeterminado }}" alt="Imagen predeterminada">
       {% endif %}
     </div>
   {% endfor %}
@@ -24,9 +20,9 @@
   {%- for block in section.blocks -%}
     <div>
       {% if block.settings.image_mobile %}
-        <img src="{{ block.settings.image_mobile | img_url: '400x600' }}" alt="{{ block.settings.image_mobile.alt | escape }}">
+        <img class="mobile-image" src="{{ block.settings.image_mobile | img_url: '400x600' }}" alt="{{ block.settings.image_mobile.alt | escape }}">
       {% else %}
-        <img src="{{ img_predeterminado }}" alt="Imagen predeterminada">
+        <img class="mobile-image" src="{{ img_predeterminado }}" alt="Imagen predeterminada">
       {% endif %}
     </div>
   {% endfor %}

@@ -1,27 +1,23 @@
-.diapositiva-nueva, .diapositiva-nueva-mobil {
+.diapositiva-nueva .desktop-image, .diapositiva-nueva-mobil .mobile-image {
     width: 100%;
-  }
-  
-  .slick-slide {
-    text-align: center;
-    color: white;
-    background: black; /* Modifica según tus necesidades */
+    display: block;
   }
   
   @media (max-width: 767px) {
-    .diapositiva-nueva {
+    .diapositiva-nueva .desktop-image {
       display: none;
     }
-    .diapositiva-nueva-mobil {
+    .diapositiva-nueva-mobil .mobile-image {
       display: block;
     }
   }
   
   @media (min-width: 768px) {
-    .diapositiva-nueva {
+    .diapositiva-nueva .desktop-image {
       display: block;
     }
-    .diapositiva-nueva-mobil {
+    .diapositiva-nueva-mobil .mobile-image {
       display: none;
     }
   }
+  
