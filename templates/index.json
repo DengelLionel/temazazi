@@ -28,43 +28,11 @@
         "texto_titulo": ""
       }
     },
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>ZAZI<\/strong>",
-            "heading_size": "h0"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "VER PRODUCTOS",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "button"
-      ],
+    "52287371-4338-4341-b03d-66dc1d92eb8d": {
+      "type": "banner-producto",
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "small",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "inverse",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "image_banner_desktop": "shopify:\/\/shop_images\/BANNER_PRODUCTO.png",
+        "image_banner_mobile": "shopify:\/\/shop_images\/BANNER_PRODUCTO.png"
       }
     },
     "featured_collection": {
@@ -98,7 +66,7 @@
   },
   "order": [
     "1e7f1ddf-132b-48bc-b755-7daf3c8fc364",
-    "image_banner",
+    "52287371-4338-4341-b03d-66dc1d92eb8d",
     "featured_collection"
   ]
 }
