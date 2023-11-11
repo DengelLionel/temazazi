@@ -76,70 +76,28 @@
 
 <script>
 
-const mobileImages = document.querySelectorAll('.mobile-image');
-
-// Create a variable to track the current image index
-let currentImageIndex = 0;
-
-// Create a function to slide to the next image
-function slideToNextImage() {
-  // Increment the current image index
-  currentImageIndex++;
-
-  // If the current image index is greater than or equal to the number of mobile images, reset it to 0
-  if (currentImageIndex >= mobileImages.length) {
-    currentImageIndex = 0;
-  }
-
-  // Update the visibility of the mobile images
-  mobileImages.forEach((image, index) => {
-    if (index === currentImageIndex) {
-      image.style.display = 'block';
-      image.src = 'https://res.cloudinary.com/darps1cta/image/upload/v1681937216/sitioweb/5_razones_por_las_que_tu_negocio_necesita_una_tienda_virtual_en_Shopify_elugcl.jpg';
-    } else {
-      image.style.opacity = 0;
-    }
-  });
-
-  // Set a timer to run the slideToNextImage() function again
-  setTimeout(slideToNextImage, 3000);
-}
-
-// Add a click event listener to the next button
-//document.querySelector('.next-button').addEventListener('click', slideToNextImage);
-
-// Call the slideToNextImage() function once to initialize the slider
-slideToNextImage();
-  
-  
 $(document).ready(function(){
   // Inicialización de Slick para escritorio
-  if ($(window).width() > 767) {
-    $('.diapositiva-nueva').slick({
-      // Tus opciones para Slick en escritorio
-      arrows: false,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000
-    });
-  }
+  $('.diapositiva-nueva').slick({
+    arrows: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000
+  });
 
   // Inicialización de Slick para móvil
-  if ($(window).width() <= 767) {
-    $('.diapositiva-nueva-mobil').slick({
-      // Tus opciones para Slick en móvil
-      arrows: false,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000
-    });
-  }
+  $('.diapositiva-nueva-mobil').slick({
+    arrows: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000
+  });
 });
   
 </script>
