@@ -1,24 +1,22 @@
-.diapositiva-nueva .desktop-image {
+.diapositiva-nueva .desktop-image, .diapositiva-nueva-mobil .mobile-image {
     width: 100%;
     display: block;
   }
-  .diapositiva-nueva-mobil{
-    display: none;
-  }
-  .mobile-image{
-    display: none;
-  }
+  
   @media (max-width: 767px) {
-    .diapositiva-nueva{
+    .diapositiva-nueva, .diapositiva-nueva .desktop-image {
       display: none;
     }
-    .desktop-image {
-        display: none;
-      }
     .diapositiva-nueva-mobil .mobile-image {
       display: block;
     }
   }
   
-
-  
+  @media (min-width: 768px) {
+    .diapositiva-nueva .desktop-image {
+      display: block;
+    }
+    .diapositiva-nueva-mobil, .diapositiva-nueva-mobil .mobile-image {
+      display: none;
+    }
+  }
