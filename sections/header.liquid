@@ -18,7 +18,7 @@
   <div class="logo">
     {% if section.settings.logo_icono %}
     <a href="{{ shop.url }}" aria-label="Inicio">
-      <img src="{{ logo_url }}" alt="{{ shop.name }}">
+      {{logo_url | image_url:width:150 |  image_tag: alt:shop.name }}
     </a>
     {% else %}
     <a href="{{ shop.url }}" aria-label="Inicio">
