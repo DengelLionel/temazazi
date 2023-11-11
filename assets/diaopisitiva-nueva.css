@@ -1,32 +1,38 @@
-/* Estilos para diapositivas de escritorio */
+/* Estilos generales para las diapositivas de escritorio */
 .diapositiva-nueva-desktop .desktop-image {
     width: 100%;
     display: block; /* Asegura que las imágenes de escritorio se muestren */
   }
-  .mobile-image{
-    display: none;
-  }
+  
+  /* Estilos generales para las diapositivas móviles */
   .diapositiva-nueva-mobil .mobile-image {
     width: 100%;
-    display: none; /* Inicialmente oculta las imágenes móviles */
+    display: none; /* Oculta inicialmente las imágenes móviles */
   }
   
-  /* Oculta las diapositivas de escritorio en dispositivos móviles */
+  /* Consultas de medios para dispositivos móviles */
   @media (max-width: 767px) {
-    .diapositiva-nueva-desktop {
+    /* Oculta las diapositivas de escritorio en dispositivos móviles */
+    .diapositiva-nueva-desktop, .diapositiva-nueva-desktop .desktop-image {
       display: none;
     }
-    .desktop-image {
-        display: none;
+  
+    /* Muestra las diapositivas móviles en dispositivos móviles */
+    .diapositiva-nueva-mobil, .diapositiva-nueva-mobil .mobile-image {
+      display: block;
     }
-    .diapositiva-nueva-mobil {
-        width: 100%;
-        display: block;
-      }
-      .mobile-image{
-        width: 100%;
-        display: block;
-      }
   }
   
-
+  /* Consultas de medios para dispositivos de escritorio */
+  @media (min-width: 768px) {
+    /* Muestra las diapositivas de escritorio en dispositivos de escritorio */
+    .diapositiva-nueva-desktop, .diapositiva-nueva-desktop .desktop-image {
+      display: block;
+    }
+  
+    /* Oculta las diapositivas móviles en dispositivos de escritorio */
+    .diapositiva-nueva-mobil, .diapositiva-nueva-mobil .mobile-image {
+      display: none;
+    }
+  }
+  
