@@ -10,7 +10,7 @@
   <nav class="navigation left-nav" aria-label="Menú de navegación principal izquierdo">
     {% for link in menu_links %}
       {% if forloop.index <= half_menu_size %}
-        <a href="{{ link.url }}" class="{{ link.active ? 'active' : '' }}" aria-label="{{ link.title }}">{{ link.title }}</a>
+        <a href="{{ link.url }}" class="{% if link.active %}active{% endif %}" aria-label="{{ link.title }}">{{ link.title }}</a>
       {% endif %}
     {% endfor %}
   </nav>
@@ -24,7 +24,7 @@
   <nav class="navigation right-nav" aria-label="Menú de navegación principal derecho">
     {% for link in menu_links %}
       {% if forloop.index > half_menu_size %}
-        <a href="{{ link.url }}" class="{{ link.active ? 'active' : '' }}" aria-label="{{ link.title }}">{{ link.title }}</a>
+        <a href="{{ link.url }}" class="{% if link.active %}active{% endif %}" aria-label="{{ link.title }}">{{ link.title }}</a>
       {% endif %}
     {% endfor %}
   </nav>
