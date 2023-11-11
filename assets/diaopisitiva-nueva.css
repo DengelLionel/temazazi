@@ -1,7 +1,11 @@
 /* Estilos para diapositivas de escritorio */
-.diapositiva-nueva-desktop .desktop-image {
+.diapositiva-nueva-desktop{
     width: 100%;
     display: block; /* Asegura que las imágenes de escritorio se muestren */
+}
+.desktop-image{
+    width: 100%;
+    display: block; 
 }
 .diapositiva-nueva-mobil {
     display: none;
