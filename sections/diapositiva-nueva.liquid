@@ -102,7 +102,14 @@ $(document).ready(function(){
           slidesToScroll: 1,
           arrows: false
         }
-      }
+      },
+      {
+        breakpoint: 1280, // en pantallas menores a 1024px
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
       // puedes agregar más puntos de interrupción si es necesario
     ]
   });
