@@ -26,14 +26,14 @@
         {% if block.settings.image_desktop  %}
         {% if block.settings.link_de_diapositiva %}
         
-    <a href="{{block.settings.link_de_diapositiva}}" class="desktop-image">
-      {{ block.settings.image_desktop | image_url: width: 1536, height: 600 | image_tag: sizes: "(max-width: 768px) 40vw, (max-width: 1280px) 720px, (max-width: 1920px) 1280px, (max-width: 2560px) 1920px, (max-width: 3840px) 2560px", class: "desktop-image" }}
+    <a href="{{block.settings.link_de_diapositiva}}" class="desktop-image swiper-slide">
+      {{ block.settings.image_desktop | image_url: width: 1536, height: 600 | image_tag: sizes: "(max-width: 768px) 40vw, (max-width: 1280px) 720px, (max-width: 1920px) 1280px, (max-width: 2560px) 1920px, (max-width: 3840px) 2560px", class: "desktop-image swiper-slide" }}
     </a>
   
 
     {% else %}
    
-    <div class="desktop-image" >
+    <div class="desktop-image swiper-slide" >
       {{ block.settings.image_desktop | image_url: width: 1536, height: 600 | image_tag: sizes: "(max-width: 768px) 40vw, (max-width: 1280px) 720px, (max-width: 1920px) 1280px, (max-width: 2560px) 1920px, (max-width: 3840px) 2560px", class: "desktop-image" }}
     </div>
 
