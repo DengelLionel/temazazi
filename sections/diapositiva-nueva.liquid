@@ -1,4 +1,4 @@
-{{ 'diapositiva-nueva.css' | asset_url | stylesheet_tag }}
+
 
 
 
@@ -81,6 +81,44 @@
         {% endfor %}
         </div>
 </section>
+
+<style>
+    /* Estilos generales para diapositivas de escritorio */
+.diapositiva-nueva-desktop {
+    display: block; /* Muestra por defecto */
+}
+
+/* Estilos generales para diapositivas móviles - ocultos por defecto */
+.diapositiva-nueva-mobil {
+    display: none;
+}
+
+/* Consultas de medios para dispositivos móviles */
+@media (max-width: 767px) {
+    /* Oculta las diapositivas de escritorio en dispositivos móviles */
+    .diapositiva-nueva-desktop {
+        display: none;
+    }
+
+    /* Muestra las diapositivas móviles en dispositivos móviles */
+    .diapositiva-nueva-mobil {
+        display: block;
+    }
+}
+
+/* Consultas de medios para dispositivos de escritorio */
+@media (min-width: 768px) {
+    /* Muestra las diapositivas de escritorio en dispositivos de escritorio */
+    .diapositiva-nueva-desktop {
+        display: block;
+    }
+
+    /* Oculta las diapositivas móviles en dispositivos de escritorio */
+    .diapositiva-nueva-mobil {
+        display: none;
+    }
+}
+</style>
 
 <script>
 $(document).ready(function(){
