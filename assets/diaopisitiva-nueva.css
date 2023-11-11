@@ -4,9 +4,12 @@
   }
   
   @media (max-width: 767px) {
-    .diapositiva-nueva .desktop-image {
+    .diapositiva-nueva{
       display: none;
     }
+    .desktop-image {
+        display: none;
+      }
     .diapositiva-nueva-mobil .mobile-image {
       display: block;
     }
