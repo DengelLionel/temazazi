@@ -2,7 +2,7 @@
 
 
 {% assign logo_url = section.settings.logo_icono | default: shop.logo %}
-{% assign menu_id = section.settings.menu | default: 'main-menu' %}
+{% assign menu_id = section.settings.menu_right | default: 'main-menu' %}
 {% assign menu_links = linklists[menu_id].links %}
 {% assign half_menu_size = menu_links.size | divided_by: 2 %}
 
