@@ -1,8 +1,10 @@
-.diapositiva-nueva .desktop-image, .diapositiva-nueva-mobil .mobile-image {
+.diapositiva-nueva .desktop-image, .mobile-image {
     width: 100%;
     display: block;
   }
-  
+  .diapositiva-nueva-mobil{
+    display: none;
+  }
   @media (max-width: 767px) {
     .diapositiva-nueva{
       display: none;
