@@ -12,12 +12,5 @@
     }
   }
   
-  @media (min-width: 768px) {
-    .diapositiva-nueva .desktop-image {
-      display: block;
-    }
-    .diapositiva-nueva-mobil .mobile-image {
-      display: none;
-    }
-  }
+
   
