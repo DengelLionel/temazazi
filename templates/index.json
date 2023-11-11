@@ -28,6 +28,13 @@
         "texto_titulo": ""
       }
     },
+    "52287371-4338-4341-b03d-66dc1d92eb8d": {
+      "type": "banner-producto",
+      "settings": {
+        "image_banner_desktop": "shopify:\/\/shop_images\/BANNER_PRODUCTO.png",
+        "image_banner_mobile": "shopify:\/\/shop_images\/BANNER_PRODUCTO.png"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -98,6 +105,7 @@
   },
   "order": [
     "1e7f1ddf-132b-48bc-b755-7daf3c8fc364",
+    "52287371-4338-4341-b03d-66dc1d92eb8d",
     "image_banner",
     "featured_collection"
   ]
