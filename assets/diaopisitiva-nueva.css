@@ -14,6 +14,9 @@
     .diapositiva-nueva-desktop {
         display: none;
     }
+    .desktop-image{
+        display: none;
+    }
     .diapositiva-nueva-mobil{
         display: block;
     }
