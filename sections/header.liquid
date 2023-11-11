@@ -21,7 +21,10 @@
       <img src="{{ logo_url }}" alt="{{ shop.name }}">
     </a>
     {% else %}
-    <h3>{{ shop.name }}</h3>
+    <a href="{{ shop.url }}" aria-label="Inicio">
+      <h3>{{ shop.name }}</h3>
+    </a>
+    
     {% endif %}
   </div>
   
