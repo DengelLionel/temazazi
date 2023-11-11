@@ -16,9 +16,13 @@
   </nav>
   
   <div class="logo">
+    {% if section.settings.logo_icono %}
     <a href="{{ shop.url }}" aria-label="Inicio">
       <img src="{{ logo_url }}" alt="{{ shop.name }}">
     </a>
+    {% else %}
+    <h3>{{ shop.name }}</h3>
+    {% endif %}
   </div>
   
   <nav class="navigation right-nav" aria-label="Menú de navegación principal derecho">
