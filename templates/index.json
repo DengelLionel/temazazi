@@ -10,10 +10,19 @@
             "image_mobile": "shopify:\/\/shop_images\/1E9A4F52-7CBF-46AC-A25E-F6D4068A9FFA.jpg",
             "link_de_diapositiva": ""
           }
+        },
+        "6b491838-5e33-45fa-b728-6276134d9e89": {
+          "type": "announcement",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/concepto-vacaciones-invierno-ano-nuevo-celebracion-imagen-chico-feliz-disfrutando-navidad-sosteniendo-monton-regalos-sonriendo-divertido-pie-sobre-fondo-rojo.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/S1c9177c70f9e4095bdc74e86915200fcT.webp",
+            "link_de_diapositiva": ""
+          }
         }
       },
       "block_order": [
-        "66a901f0-1bc6-4c78-952d-97e891dbe8a4"
+        "66a901f0-1bc6-4c78-952d-97e891dbe8a4",
+        "6b491838-5e33-45fa-b728-6276134d9e89"
       ],
       "settings": {
         "texto_titulo": ""
