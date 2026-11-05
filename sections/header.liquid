@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{{ 'header-nuevo.css' | asset_url }}" media="print" onload="this.media='all'">
 <header class="site-header" role="banner">
-  {%  render 'header-logo-centro' logo_link:section.settings.logo_icono | default: shop.logo, menuid:section.settings.menu_right | default: 'main-menu'  %}
+  {% render 'header-logo-centro', logo_link: section.settings.logo_icono, default: 'main-menu', menuid: section.settings.menu_right %}
 </header>
 
 
@@ -201,3 +201,15 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%  render 'header-logo-centro' logo_link:section.settings.logo_icono | default:
+    shop.logo, menuid:section.settings.menu_right | default: 'main-menu'  %}"
+  to: "{% render 'header-logo-centro', logo_link: section.settings.logo_icono, default:
+    'main-menu', menuid: section.settings.menu_right %}"
+  position: 153..285
+{% endcomment %}
